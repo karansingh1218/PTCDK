@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  script.
+    let data = !{JSON.stringify(data)};
+  h1= title
+  h3 #{publisher} Editor Reviews
+  br
+  for d in data
+    #writer
+      span Editor Name: #{d.editorname} | Editor Outlet: #{d.publication} | Average Payment: #{d.paymentaverage} | Average Rating: #{d.ratingaverage}
+      p Editor responded on average in #{d.responseaverage} weeks. 
+      p Post posted at: #{d.time}
+      a(href=`/person/${d.editorname}`) #{d.editorname}
+    
+  p Go Back to 
+    a(href='/') Main
+  

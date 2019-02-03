@@ -1,0 +1,34 @@
+extends layout
+
+block content
+    
+    p Please expand our list of information on editors. All reports will be posted anonymously. Only report rates which you were the writer.
+
+    p Please if you frequently work with the same editor post frequently, so we can understand the editor better. 
+
+    form(action = "/person", method = "POST")
+        label(for = "editorname") Editor Name:
+        br
+        input(name = "editorname" value = "editorname")
+        br
+        label(for = "amount") Payment Amount:
+        br
+        input(name = "amount" value = 500 type='number')
+        br
+        label(for = "responsetime") Response Time (In Weeks):
+        br
+        input(name = "response" value = 6 type='number')
+        br
+        label(for = "publication") Publication:
+        br
+        input(name = "publication" value = "publication")
+        br
+        label(for = "rating") Rating:
+        br
+        input(name = "rating" value = 5 type='number')
+        br
+        label(for = "notes") Notes:
+        br
+        input(name = "notes" value = "notes")
+        br
+        button(type = "submit") Post New Editor!

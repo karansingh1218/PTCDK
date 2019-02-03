@@ -1,0 +1,80 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: rgb(250, 250, 250);
+  color: #333;
+}
+
+header {
+  border-bottom: 0.2rem solid #37bbe4;
+  text-align: center;
+}
+
+header a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333333;
+  text-transform: uppercase;
+  margin: 0px 10px 0px 10px;
+}
+
+#logo {
+  width: 25%;
+  height: 25%;
+  margin: 0 auto;
+  display: block;
+}
+
+#writer {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15); 
+  text-align: center;
+  margin: 0 auto; 
+}
+
+#places li {
+  list-style-type: none;
+  font-size: 24px; 
+  display: block;
+}
+
+#Information {
+  float: right; 
+}
+
+/* FORM CSS */
+form {
+  grid-column: 2 / 7;
+  grid-row: 2 / 6;
+  font-size: 20px; 
+  text-align: center;
+  background: #e3e9f2;
+  border: 2.5px solid royalblue;
+  border-radius: 25px;
+}
+
+input {
+  width: 25%;
+  padding: 3px 5px;
+  margin: 4px 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  padding: 8px 15px 8px 15px;
+  background: #37bbe4;
+  color: #fff;
+  box-shadow: 1px 1px 4px #DADADA;
+  border-radius: 3px;
+  margin: 0 auto;
+  text-align: center;
+  margin: 2.5px 2.5px 2.5px 2.5px;
+}
+
+/* TABLE CSS */
+table, th, td {
+  border-collapse: collapse;
+  text-align:left;
+  padding: 10px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}

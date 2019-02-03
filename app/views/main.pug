@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  script.
+    let data = !{JSON.stringify(data)};
+  h1= title
+  p Welcome to #{title}
+  p Publishers:
+  ul(id='places')
+    for d in data
+      li
+        a(href=`/publication/${d.publication}`) #{d.publication}
+  #Information 
+    p PTCDK is a tool for freelance writers to send more effective pitches to editors by aggregating what people thought about their editor.
+    button
+      a(href=`/person`) New Story Note
+    br
+    button
+      a(href=`/editor`) New Editor

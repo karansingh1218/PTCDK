@@ -1,0 +1,31 @@
+extends layout
+
+block content
+    
+    p Please expand our overall information on editors. 
+
+    p Please if you frequently work with the same editor post frequently, so we can understand the editor better. 
+
+        form(action = "/editor", method = "POST")
+            label(for = "editorname") Editor Name:
+            br
+            input(name = "editorname" value = "editorname")
+            br
+            label(for = "publication") Publication:
+            br
+            input(name = "publication" value = "publication")
+            br
+            label(for = "paymentaverage") Payment Amount:
+            br
+            input(name = "paymentaverage" value = 500 type='number')
+            br
+            label(for = "responseaverage") Response Time (In Weeks):
+            br
+            input(name = "responseaverage" value = 6 type='number')
+            br
+            label(for = "ratingaverage") Average Rating:
+            br
+            input(name = "ratingaverage" value = 5 type='number')
+            br
+            button(type = "submit") Post New Editor Information!
+    

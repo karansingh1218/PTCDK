@@ -1,0 +1,55 @@
+extends layout
+
+block content
+  script.
+    let data = !{JSON.stringify(data)};
+  h1= title
+  h3 Reviews of #{person} 
+  table(style='width:100%', border='1')
+    tr
+        th Average Payment Time
+        th Average Response Time
+        th Average Rating 
+    tr
+  br
+  for d in data
+    #writer
+      span Editor Name: #{d.editorname} | Editor Outlet: #{d.publication} | Payment: #{d.amount} | Rating: #{d.rating}
+      p Notes: #{d.notes}
+      p Editor responded in #{d.responsetime} weeks. 
+      p Post posted at: #{d.time}
+      a(href=`/publication/${d.publication}`) #{d.publication}
+    
+  p Go Back to 
+    a(href='/') Main
+  script.
+    const table = document.querySelector('table')
+    
+    let apt = 0
+    let art = 0
+    let at = 0
+    data.map(d => {
+        apt += d.amount
+        art += d.responsetime
+        at  += d.rating 
+    })
+
+    apt = apt / data.length
+    art = art / data.length
+    at  = at / data.length
+
+    let stars = ''
+    for(let i = 0; i < at; i++) {
+        stars += '⭐'
+    }
+
+    let row = table.insertRow(1)
+
+    let cell0 = row.insertCell(0);
+    let cell1 = row.insertCell(1);
+    let cell2 = row.insertCell(2);
+
+    cell0.innerHTML = apt
+    cell1.innerHTML = art
+    cell2.innerHTML = stars 
+    //
