@@ -5,8 +5,8 @@ const {Client, Pool} = require('pg')
 const pool = new Pool({
   user: 'postgres',
   host: '127.0.0.1', 
-  database: 'hoya-db',
-  password: 'postgres',
+  database: 'NOT FOR YOU',
+  password: 'NOT FOR YOU',
   port: 5431,
 })
 
